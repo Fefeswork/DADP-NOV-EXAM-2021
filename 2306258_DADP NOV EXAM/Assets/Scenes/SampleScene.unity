@@ -232,12 +232,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: 9f36651b4dddb604789466a5d7cd7c0b, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 453a633a1ae7c3b4eb224b0746a0dfd8, type: 3}
   _textField: {fileID: 188552732}
   _choiceButtonContainer: {fileID: 474975619}
   _choiceButtonPrefab: {fileID: 1275893116941226772, guid: 02b1073afe93555459ddc3b2255c4c1f, type: 3}
   _normalTextColor: {r: 0, g: 0, b: 0, a: 0.95686275}
-  _thoughtTextColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0.92156863}
+  _thoughtTextColor: {r: 0.49056602, g: 0.47853327, b: 0.47853327, a: 1}
 --- !u!4 &262866882
 Transform:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.24511792, b: 0.10094339, a: 0.93333334}
+  m_Color: {r: 0.4339623, g: 0.19237709, b: 0.054859374, a: 0.88235295}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -928,7 +928,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 73b4a94052d0eb340afc40c3f1cb7c70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

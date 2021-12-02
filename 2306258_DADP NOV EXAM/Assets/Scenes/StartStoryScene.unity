@@ -328,7 +328,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Why me?... Why now? I just started showing off my skills to earn a scholarship.\r\n\n\n\n\n\nWho
     knew your life could change in just 3 seconds? 3 whole seconds my life changed.
-    I felt like I was on cloud 9 and next thing you know 3\u20262\u20261"
+    I felt like I was on cloud 9 and next thing you know 3\u20262\u20261..."
 --- !u!222 &380698948
 CanvasRenderer:
   m_ObjectHideFlags: 0

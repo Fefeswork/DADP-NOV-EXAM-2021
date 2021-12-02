@@ -25,6 +25,9 @@ public class InkManager : MonoBehaviour
     [SerializeField]
     private Color _thoughtTextColor;
 
+  
+
+
     void Start()
     {
         StartStory();
