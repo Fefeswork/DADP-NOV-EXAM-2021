@@ -25,7 +25,8 @@ public class InkManager : MonoBehaviour
     [SerializeField]
     private Color _thoughtTextColor;
 
-  
+    public Button vfx;
+    public Transform BtnRoom;
 
 
     void Start()
@@ -54,6 +55,13 @@ public class InkManager : MonoBehaviour
         else if (_story.currentChoices.Count > 0)
         {
             DisplayChoices();
+        }
+        else if (_story.canContinue == false)
+        {
+            Debug.Log("Story has ended!");
+            Instantiate(vfx,BtnRoom.transform.position, Quaternion.identity);
+
+
         }
     }
 
