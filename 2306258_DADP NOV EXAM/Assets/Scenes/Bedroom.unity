@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: e8524a798ae2ebc41bdac3a870075a78, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 1ee51998bd2540b408e38f0274269960, type: 3}
   _textField: {fileID: 1310693765}
   _choiceButtonContainer: {fileID: 1690976729}
   _choiceButtonPrefab: {fileID: 130489718}
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6037736, g: 0.30686244, b: 0, a: 0.78039217}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
