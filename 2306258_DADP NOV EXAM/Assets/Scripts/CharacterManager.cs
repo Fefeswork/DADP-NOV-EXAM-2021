@@ -7,22 +7,30 @@ using UnityEngine.UI;
 public class CharacterManager : MonoBehaviour
 {
     private InkManager _inkManager;
-    public SpriteRenderer Sprite;
-    public Sprite newSprite;
+    public SpriteRenderer Normal;
+    public Sprite Happy;
+    public Sprite Worried;
+
+
     private Story _story;
 
     void Start()
     {
         _inkManager = FindObjectOfType<InkManager>();
-        Sprite = gameObject.GetComponent<SpriteRenderer>();
+        Normal = gameObject.GetComponent<SpriteRenderer>();
        
     }
 
     private void Update()
     {
-        if (Sprite.CompareTag("Amina"))
+        if (Normal.CompareTag("Norm"))
         {
-            ChangeSprite(newSprite);
+            ChangeSprite(Happy);
+        }
+        else if(Normal.CompareTag("Wor"))
+        {
+            ChangeSprite(Worried);
+
         }
         else
         {
@@ -33,7 +41,7 @@ public class CharacterManager : MonoBehaviour
     }
     void ChangeSprite(Sprite newSprite)
     {
-        Sprite.sprite = newSprite;
+        Normal.sprite = newSprite;
         Debug.Log("Sprite Changed");
     }
 }

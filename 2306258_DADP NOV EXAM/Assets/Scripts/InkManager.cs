@@ -26,6 +26,11 @@ public class InkManager : MonoBehaviour
     private Color _thoughtTextColor;
 
     private int _mentalHealth;
+    private InkManager _inkManager;
+    public SpriteRenderer Fine;
+    public Sprite Happy;
+    public Sprite Worried;
+    public Sprite Normal;
 
     public int MentalHealth
     {
@@ -43,6 +48,7 @@ public class InkManager : MonoBehaviour
 
     void Start()
     {
+        _inkManager = FindObjectOfType<InkManager>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         StartStory();
@@ -58,7 +64,7 @@ public class InkManager : MonoBehaviour
         Debug.Log($"Logging ink variables. mental health: {mentalHealth}");
         DisplayNextLine();
     }
-  
+
 
     private void InitializeVariables()
     {
@@ -72,90 +78,125 @@ public class InkManager : MonoBehaviour
         });
     }
 
-        public void DisplayNextLine()
+    public void DisplayNextLine()
+    {
+        if (_story.canContinue)
         {
-            if (_story.canContinue)
-            {
-                string text = _story.Continue(); // gets next line
+            string text = _story.Continue(); // gets next line
 
-                text = text?.Trim(); // removes white space from text
+            text = text?.Trim(); // removes white space from text
 
-                ApplyStyling();
-
-                _textField.text = text; // displays new text
-            }
-            else if (_story.currentChoices.Count > 0)
-            {
-                DisplayChoices();
-            }
-            else if (_story.canContinue == false)
-            {
-                Debug.Log("Story has ended!");
-                Instantiate(vfx, BtnRoom.transform.position, Quaternion.identity);
+            ApplyStyling();
+            ShowCharacter();
 
 
-            }
+            _textField.text = text; // displays new text
         }
-
-        public void DisplayChoices()
+        else if (_story.currentChoices.Count > 0)
         {
-            // checks if choices are already being displaye
-            if (_choiceButtonContainer.GetComponentsInChildren<Button>().Length > 0) return;
-
-            for (int i = 0; i < _story.currentChoices.Count; i++) // iterates through all choices
-            {
-
-                var choice = _story.currentChoices[i];
-                var button = CreateChoiceButton(choice.text); // creates a choice button
-
-                button.onClick.AddListener(() => OnClickChoiceButton(choice));
-            }
+            DisplayChoices();
         }
-
-        Button CreateChoiceButton(string text)
+        else if (_story.canContinue == false)
         {
-            // creates the button from a prefab
-            var choiceButton = Instantiate(_choiceButtonPrefab);
-            choiceButton.transform.SetParent(_choiceButtonContainer.transform, false);
+            Debug.Log("Story has ended!");
+            Instantiate(vfx, BtnRoom.transform.position, Quaternion.identity);
 
-            // sets text on the button
-            var buttonText = choiceButton.GetComponentInChildren<Text>();
-            buttonText.text = text;
-
-            return choiceButton;
-        }
-
-        void OnClickChoiceButton(Choice choice)
-        {
-            _story.ChooseChoiceIndex(choice.index); // tells ink which choice was selected
-            RefreshChoiceView(); // removes choices from the screen
-            DisplayNextLine();
 
         }
+    }
 
-        void RefreshChoiceView()
+    public void DisplayChoices()
+    {
+        // checks if choices are already being displaye
+        if (_choiceButtonContainer.GetComponentsInChildren<Button>().Length > 0) return;
+
+        for (int i = 0; i < _story.currentChoices.Count; i++) // iterates through all choices
         {
-            if (_choiceButtonContainer != null)
-            {
-                foreach (var button in _choiceButtonContainer.GetComponentsInChildren<Button>())
-                {
-                    Destroy(button.gameObject);
-                }
-            }
+
+            var choice = _story.currentChoices[i];
+            var button = CreateChoiceButton(choice.text); // creates a choice button
+
+            button.onClick.AddListener(() => OnClickChoiceButton(choice));
         }
+    }
 
-        public void ApplyStyling()
+    Button CreateChoiceButton(string text)
+    {
+        // creates the button from a prefab
+        var choiceButton = Instantiate(_choiceButtonPrefab);
+        choiceButton.transform.SetParent(_choiceButtonContainer.transform, false);
+
+        // sets text on the button
+        var buttonText = choiceButton.GetComponentInChildren<Text>();
+        buttonText.text = text;
+
+        return choiceButton;
+    }
+
+    void OnClickChoiceButton(Choice choice)
+    {
+        _story.ChooseChoiceIndex(choice.index); // tells ink which choice was selected
+        RefreshChoiceView(); // removes choices from the screen
+        DisplayNextLine();
+
+    }
+
+    void RefreshChoiceView()
+    {
+        if (_choiceButtonContainer != null)
         {
-            if (_story.currentTags.Contains("thought"))
+            foreach (var button in _choiceButtonContainer.GetComponentsInChildren<Button>())
             {
-                _textField.color = _thoughtTextColor;
-                _textField.fontStyle = FontStyle.Italic;
-            }
-            else
-            {
-                _textField.color = _normalTextColor;
-                _textField.fontStyle = FontStyle.Normal;
+                Destroy(button.gameObject);
             }
         }
     }
+
+    public void ApplyStyling()
+    {
+        if (_story.currentTags.Contains("thought"))
+        {
+            _textField.color = _thoughtTextColor;
+            _textField.fontStyle = FontStyle.Italic;
+        }
+        else
+        {
+            _textField.color = _normalTextColor;
+            _textField.fontStyle = FontStyle.Normal;
+        }
+    }
+
+    public void ShowCharacter()
+    {
+
+        {
+            if (_story.currentTags.Contains("Happy"))
+            {
+                ChangeSprite(Happy);
+            }
+            else if(_story.currentTags.Contains("Worried"))
+            {
+                ChangeSprite(Worried);
+            }
+            else if(_story.currentTags.Contains("Normal"))
+            {
+                ChangeSprite(Normal);
+            }
+            {
+                Debug.Log("No Tag found");
+            }
+
+
+
+            void ChangeSprite(Sprite newSprite)
+            {
+                Fine.sprite = newSprite;
+                Debug.Log("Sprite Changed");
+            }
+        }
+    }
+}
+
+
+    
 
