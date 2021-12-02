@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Bedroom.unity
     guid: 5100c4ef8238590468531dbfe37d74d5
   - enabled: 1
+    path: Assets/Scenes/PhoneCallScene.unity
+    guid: 542a27cf8c54c224889d3d050de83fe4
+  - enabled: 1
     path: Assets/Scenes/PhysioScene.unity
     guid: ce90541a6975e204d8faf7609ec3b1ec
   m_configObjects: {}

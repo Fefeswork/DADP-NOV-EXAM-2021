@@ -42,8 +42,7 @@ public class InkManager : MonoBehaviour
         }
     }
 
-    public Button vfx;
-    public Transform BtnRoom;
+    public GameObject BtnRoom;
     private SpriteRenderer spriteRenderer;
 
     void Start()
@@ -99,7 +98,7 @@ public class InkManager : MonoBehaviour
         else if (_story.canContinue == false)
         {
             Debug.Log("Story has ended!");
-            Instantiate(vfx, BtnRoom.transform.position, Quaternion.identity);
+            SpawnButton();
 
 
         }
@@ -194,6 +193,12 @@ public class InkManager : MonoBehaviour
                 Debug.Log("Sprite Changed");
             }
         }
+    }
+
+    public void SpawnButton()
+    {
+        Instantiate(BtnRoom, new Vector3(0, 0, 0), Quaternion.identity);
+        Debug.Log("Button Spawned");
     }
 }
 
