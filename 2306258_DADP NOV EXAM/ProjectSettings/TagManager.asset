@@ -9,6 +9,7 @@ TagManager:
   - Norm
   - Happ
   - Wor
+  - Normal
   layers:
   - Default
   - TransparentFX

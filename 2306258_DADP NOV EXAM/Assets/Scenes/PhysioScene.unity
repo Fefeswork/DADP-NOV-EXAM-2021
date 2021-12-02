@@ -726,17 +726,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: 450dccdb3a629ba4f93a05311a3275fb, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 0c44933f35556ac49b79cdae57334674, type: 3}
   _textField: {fileID: 981162766}
   _choiceButtonContainer: {fileID: 1294398412}
   _choiceButtonPrefab: {fileID: 373090010}
   _normalTextColor: {r: 0, g: 0, b: 0, a: 0.92156863}
-  _thoughtTextColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0.84705883}
-  Fine: {fileID: 0}
+  _thoughtTextColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0.99607843}
+  Fine: {fileID: 1633252602}
   Happy: {fileID: 0}
-  Worried: {fileID: 0}
-  Normal: {fileID: 0}
-  BtnRoom: {fileID: 0}
+  Worried: {fileID: 21300000, guid: e68215c271083dd428d426cdb3aff656, type: 3}
+  Normal: {fileID: 21300000, guid: 22ca7f25fe4af0c4eb4012528bba74cd, type: 3}
+  BtnRoom: {fileID: 1970880601}
 --- !u!4 &1180850056
 Transform:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 1633252602}
   m_Layer: 0
   m_Name: Layla
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
