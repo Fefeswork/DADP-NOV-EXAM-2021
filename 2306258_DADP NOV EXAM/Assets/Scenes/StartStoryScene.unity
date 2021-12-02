@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 352198471}
   - component: {fileID: 352198470}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SrtButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

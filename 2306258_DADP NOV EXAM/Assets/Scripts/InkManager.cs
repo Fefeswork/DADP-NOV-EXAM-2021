@@ -26,6 +26,7 @@ public class InkManager : MonoBehaviour
     private Color _thoughtTextColor;
 
     private int _mentalHealth;
+
     public int MentalHealth
     {
         get => _mentalHealth;
