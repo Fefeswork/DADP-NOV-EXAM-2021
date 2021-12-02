@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextButtonScript : MonoBehaviour
+public class NextButton : MonoBehaviour
 {
-    private InkManager _inkManager;
+   
+  private InkManager _inkManager;
 
     void Start()
     {
@@ -21,3 +22,4 @@ public class NextButtonScript : MonoBehaviour
         _inkManager?.DisplayNextLine();
     }
 }
+
