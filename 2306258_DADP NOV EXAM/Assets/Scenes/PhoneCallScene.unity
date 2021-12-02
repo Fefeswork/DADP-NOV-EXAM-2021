@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 7b4676e3af4b47c48a777cfbf312571c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: f628388f532262d40a5b636583969b1d, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 8582a1a3e81566144b5efd083f68a38c, type: 3}
   _textField: {fileID: 1756332025}
   _choiceButtonContainer: {fileID: 1863853942}
   _choiceButtonPrefab: {fileID: 527795824}
@@ -980,7 +980,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: a819fe46805c6c049a17e94dcaa71c2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

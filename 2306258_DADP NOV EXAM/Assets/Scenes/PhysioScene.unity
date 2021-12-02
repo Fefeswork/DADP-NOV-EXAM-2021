@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: c301ab2c77410f24e899a688664e80b3, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 450dccdb3a629ba4f93a05311a3275fb, type: 3}
   _textField: {fileID: 981162766}
   _choiceButtonContainer: {fileID: 1294398412}
   _choiceButtonPrefab: {fileID: 373090010}
@@ -736,7 +736,6 @@ MonoBehaviour:
   Happy: {fileID: 0}
   Worried: {fileID: 0}
   Normal: {fileID: 0}
-  vfx: {fileID: 0}
   BtnRoom: {fileID: 0}
 --- !u!4 &1180850056
 Transform:
