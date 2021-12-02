@@ -39,16 +39,19 @@ public class InkManager : MonoBehaviour
 
     public Button vfx;
     public Transform BtnRoom;
-
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         StartStory();
     }
 
     private void StartStory()
     {
         _story = new Story(_inkJsonAsset.text);
+
 
         var mentalHealth = (int)_story.variablesState["mental_health"];
 

@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,25 +6,34 @@ using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    private InkManager _inkManager;
+    public SpriteRenderer Sprite;
     public Sprite newSprite;
+    private Story _story;
 
     void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _inkManager = FindObjectOfType<InkManager>();
+        Sprite = gameObject.GetComponent<SpriteRenderer>();
        
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Sprite.CompareTag("Amina"))
         {
             ChangeSprite(newSprite);
         }
+        else
+        {
+            Debug.Log("No Tag found");
+        }
+       
+
     }
     void ChangeSprite(Sprite newSprite)
     {
-        spriteRenderer.sprite = newSprite;
+        Sprite.sprite = newSprite;
         Debug.Log("Sprite Changed");
     }
 }
