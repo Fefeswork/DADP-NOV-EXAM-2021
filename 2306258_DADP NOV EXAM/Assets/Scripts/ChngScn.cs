@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ChngScn : MonoBehaviour
 {
-    public void Credits(string Startscene)
+    public void Bedroom(string Startscene)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Physio(string Startscene)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
+
