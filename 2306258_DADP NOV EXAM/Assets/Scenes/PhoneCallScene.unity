@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: 6ab91e88bc1713b4dbc0b0d0cb9b3595, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: a5c6b70ea0ef4f94192bc6bf9ef266d5, type: 3}
   _textField: {fileID: 1756332025}
   _choiceButtonContainer: {fileID: 1863853942}
   _choiceButtonPrefab: {fileID: 527795824}

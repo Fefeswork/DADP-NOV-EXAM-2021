@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: a79a3a6c060549d4fb68e8317b083460, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 092ff70913089264eae6806d8922f237, type: 3}
   _textField: {fileID: 279479488}
   _choiceButtonContainer: {fileID: 245591360}
   _choiceButtonPrefab: {fileID: 42735900}
