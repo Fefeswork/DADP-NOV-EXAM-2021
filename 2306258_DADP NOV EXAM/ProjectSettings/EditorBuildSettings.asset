@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PhysioScene.unity
     guid: ce90541a6975e204d8faf7609ec3b1ec
+  - enabled: 1
+    path: Assets/Scenes/End Scene.unity
+    guid: 0cb8a3989d2529c4c9d69c0815ecdc78
   m_configObjects: {}

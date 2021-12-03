@@ -354,6 +354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BtnChngScn
       objectReference: {fileID: 0}
+    - target: {fileID: 3579686319894647446, guid: 36cc9018221e28e41802be370f5a6b29, type: 3}
+      propertyPath: m_Text
+      value: Day 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36cc9018221e28e41802be370f5a6b29, type: 3}
 --- !u!224 &461067844 stripped
