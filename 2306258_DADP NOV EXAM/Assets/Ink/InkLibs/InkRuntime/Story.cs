@@ -2734,6 +2734,8 @@ namespace Ink.Runtime
             }
         }
 
+        public bool VAR { get; set; }
+
         Container _mainContentContainer;
         ListDefinitionsOrigin _listDefinitions;
 

@@ -32,6 +32,7 @@ public class InkManager : MonoBehaviour
     public Sprite Worried;
     public Sprite Normal;
 
+    public Text _MentalHealth;
     public int MentalHealth
     {
         get => _mentalHealth;
@@ -44,6 +45,8 @@ public class InkManager : MonoBehaviour
 
     public GameObject BtnRoom;
     private SpriteRenderer spriteRenderer;
+   
+   
 
     void Start()
     {
@@ -99,7 +102,7 @@ public class InkManager : MonoBehaviour
         {
             Debug.Log("Story has ended!");
             SpawnButton();
-
+            MentalH();
 
         }
     }
@@ -200,6 +203,19 @@ public class InkManager : MonoBehaviour
         Instantiate(BtnRoom, new Vector3(0, 0, 0), Quaternion.identity);
         Debug.Log("Button Spawned");
     }
+
+    public void MentalH()
+    {
+       if(_mentalHealth > 50)
+        {
+            Debug.Log("mental health in check");
+        }
+       else
+        {
+            Debug.Log("Try again");
+        }
+    }
+
 }
 
 
