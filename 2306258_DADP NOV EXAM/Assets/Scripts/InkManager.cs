@@ -53,7 +53,12 @@ public class InkManager : MonoBehaviour
         _inkManager = FindObjectOfType<InkManager>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-        StartStory();
+         StartStory();
+    }
+
+    private void SetHealthInUI(int newValue)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void StartStory()
@@ -204,16 +209,19 @@ public class InkManager : MonoBehaviour
         Debug.Log("Button Spawned");
     }
 
+    //This fumction just helps check the variables for
+   // the different outcomes
     public void MentalH()
     {
-       if(_mentalHealth > 50)
+       if(MentalHealth <= 50)
         {
-            Debug.Log("mental health in check");
+            Debug.Log("Mental Health not so good");
         }
-       else
+        else if (MentalHealth > 50)
         {
-            Debug.Log("Try again");
+            Debug.Log("Mental health good");
         }
+       
     }
 
 }
