@@ -238,8 +238,9 @@ public class InkManager : MonoBehaviour
 
     public void SpawnButton()
     {
-        Instantiate(BtnRoom, GameObject.Find("Button").transform.position, Quaternion.identity);
-        Debug.Log("Button Spawned");
+            Instantiate(BtnRoom, GameObject.Find("BtnChngScn").transform.position, Quaternion.identity);
+            Debug.Log("Button Spawned");
+       
     }
 
     public void CurrentState()

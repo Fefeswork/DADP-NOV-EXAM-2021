@@ -247,7 +247,7 @@ MonoBehaviour:
   Worried: {fileID: 21300000, guid: 7ece88ac27069be4998485d637efaceb, type: 3}
   Normal: {fileID: 21300000, guid: 98d5ca7d865ccc2459ca53460153a1b0, type: 3}
   _MentalHealth: {fileID: 0}
-  BtnRoom: {fileID: 784261701}
+  BtnRoom: {fileID: 3579686318617154558, guid: 36cc9018221e28e41802be370f5a6b29, type: 3}
 --- !u!4 &262866882
 Transform:
   m_ObjectHideFlags: 0
@@ -512,11 +512,6 @@ Transform:
   m_Father: {fileID: 1661348764}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &784261701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1275893116941226774, guid: 02b1073afe93555459ddc3b2255c4c1f, type: 3}
-  m_PrefabInstance: {fileID: 1275893117112255622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876793676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1486,10 @@ PrefabInstance:
     - target: {fileID: 3579686318617154558, guid: 36cc9018221e28e41802be370f5a6b29, type: 3}
       propertyPath: m_Name
       value: BtnChngScn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579686318617154558, guid: 36cc9018221e28e41802be370f5a6b29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3579686318617154558, guid: 36cc9018221e28e41802be370f5a6b29, type: 3}
       propertyPath: m_TagString
