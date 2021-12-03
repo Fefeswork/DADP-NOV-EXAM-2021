@@ -25,12 +25,26 @@ public class InkManager : MonoBehaviour
     [SerializeField]
     private Color _thoughtTextColor;
 
+    [SerializeField]
+    private Color _ezraTextColor;
+
+    [SerializeField]
+    private Color _momTextColor;
+
+    [SerializeField]
+    private Color _laylaTextColor;
+
+    [SerializeField]
+    private Color _rileyTextColor;
+
     private int _mentalHealth;
     private InkManager _inkManager;
     public SpriteRenderer Fine;
     public Sprite Happy;
     public Sprite Worried;
     public Sprite Normal;
+
+    public GameObject button;
 
     public Text _MentalHealth;
     public int MentalHealth
@@ -56,10 +70,7 @@ public class InkManager : MonoBehaviour
          StartStory();
     }
 
-    private void SetHealthInUI(int newValue)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 
     private void StartStory()
     {
@@ -106,15 +117,25 @@ public class InkManager : MonoBehaviour
         else if (_story.canContinue == false)
         {
             Debug.Log("Story has ended!");
+
+            MentalHealth = (int)_story.variablesState["mental_health"];
+
+            _story.ObserveVariable("mental_health", (string varName, object newValue) =>
+            {
+                MentalHealth = ((int)newValue);
+                Debug.Log($"Logging ink variables. mental health: {(int)newValue}");
+                Debug.Log(newValue);
+            });
+            
             SpawnButton();
-            MentalH();
+            
 
         }
     }
 
     public void DisplayChoices()
     {
-        // checks if choices are already being displaye
+        // checks if choices are already being displayed
         if (_choiceButtonContainer.GetComponentsInChildren<Button>().Length > 0) return;
 
         for (int i = 0; i < _story.currentChoices.Count; i++) // iterates through all choices
@@ -166,11 +187,32 @@ public class InkManager : MonoBehaviour
             _textField.color = _thoughtTextColor;
             _textField.fontStyle = FontStyle.Italic;
         }
+        else if(_story.currentTags.Contains("Ezra"))
+        {
+            _textField.color = _ezraTextColor;
+            _textField.fontStyle = FontStyle.Normal;
+        }
+        else if(_story.currentTags.Contains("Mom"))
+        {
+            _textField.color = _momTextColor;
+            _textField.fontStyle = FontStyle.Normal;
+        }
+        else if(_story.currentTags.Contains("Riley"))
+        {
+            _textField.color = _rileyTextColor;
+            _textField.fontStyle = FontStyle.Normal;
+        }
+        else if(_story.currentTags.Contains("Layala"))
+        {
+            _textField.color = _laylaTextColor;
+            _textField.fontStyle = FontStyle.Normal;
+        }
         else
         {
             _textField.color = _normalTextColor;
             _textField.fontStyle = FontStyle.Normal;
         }
+        
     }
 
     public void ShowCharacter()
@@ -205,24 +247,11 @@ public class InkManager : MonoBehaviour
 
     public void SpawnButton()
     {
-        Instantiate(BtnRoom, new Vector3(0, 0, 0), Quaternion.identity);
+       
         Debug.Log("Button Spawned");
     }
 
-    //This fumction just helps check the variables for
-   // the different outcomes
-    public void MentalH()
-    {
-       if(MentalHealth <= 50)
-        {
-            Debug.Log("Mental Health not so good");
-        }
-        else if (MentalHealth > 50)
-        {
-            Debug.Log("Mental health good");
-        }
-       
-    }
+    
 
 }
 
