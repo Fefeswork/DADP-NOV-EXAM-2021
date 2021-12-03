@@ -75,10 +75,6 @@ public class InkManager : MonoBehaviour
     {
         _story = new Story(_inkJsonAsset.text);
 
-
-        var mentalHealth = (int)_story.variablesState["mental_health"];
-
-        Debug.Log($"Logging ink variables. mental health: {mentalHealth}");
         DisplayNextLine();
     }
 

@@ -867,7 +867,7 @@ MonoBehaviour:
   _ezraTextColor: {r: 0, g: 0, b: 0, a: 0}
   _momTextColor: {r: 0, g: 0, b: 0, a: 0}
   _laylaTextColor: {r: 0, g: 0, b: 0, a: 0}
-  _rileyTextColor: {r: 0, g: 0, b: 0, a: 0}
+  _rileyTextColor: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
   Fine: {fileID: 0}
   Happy: {fileID: 0}
   Worried: {fileID: 0}
