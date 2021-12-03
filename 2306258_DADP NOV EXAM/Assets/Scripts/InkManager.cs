@@ -117,16 +117,7 @@ public class InkManager : MonoBehaviour
         else if (_story.canContinue == false)
         {
             Debug.Log("Story has ended!");
-
-            MentalHealth = (int)_story.variablesState["mental_health"];
-
-            _story.ObserveVariable("mental_health", (string varName, object newValue) =>
-            {
-                MentalHealth = ((int)newValue);
-                Debug.Log($"Logging ink variables. mental health: {(int)newValue}");
-                Debug.Log(newValue);
-            });
-            
+            CurrentState();
             SpawnButton();
             
 
@@ -247,8 +238,22 @@ public class InkManager : MonoBehaviour
 
     public void SpawnButton()
     {
-       
+        Instantiate(button, new Vector3(0, 0, 0), Quaternion.identity);
         Debug.Log("Button Spawned");
+    }
+
+    public void CurrentState()
+    {
+        MentalHealth = (int)_story.variablesState["mental_health"];
+
+        _story.ObserveVariable("mental_health", (string varName, object newValue) =>
+        {
+            MentalHealth = ((int)newValue);
+            Debug.Log($"Logging ink variables. mental health: {(int)newValue}");
+            Debug.Log(newValue);
+        });
+
+        
     }
 
     
