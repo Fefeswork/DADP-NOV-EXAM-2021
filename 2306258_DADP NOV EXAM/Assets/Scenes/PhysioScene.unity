@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 0.7254902}
+  m_Color: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 0.80784315}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0.7254902}
+  m_Color: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 0.80784315}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -726,16 +726,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: 0c44933f35556ac49b79cdae57334674, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: 0302a7511e3ef444db362a7ca7a193f5, type: 3}
   _textField: {fileID: 981162766}
   _choiceButtonContainer: {fileID: 1294398412}
   _choiceButtonPrefab: {fileID: 373090010}
   _normalTextColor: {r: 0, g: 0, b: 0, a: 0.92156863}
-  _thoughtTextColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0.99607843}
+  _thoughtTextColor: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
+  _ezraTextColor: {r: 0, g: 0, b: 0, a: 0}
+  _momTextColor: {r: 0, g: 0, b: 0, a: 0}
+  _laylaTextColor: {r: 0.27453667, g: 0.041491613, b: 0.5943396, a: 0.89411765}
+  _rileyTextColor: {r: 0.5803922, g: 0.13333334, b: 0.8666667, a: 0.91764706}
   Fine: {fileID: 1633252602}
   Happy: {fileID: 0}
   Worried: {fileID: 21300000, guid: e68215c271083dd428d426cdb3aff656, type: 3}
   Normal: {fileID: 21300000, guid: 22ca7f25fe4af0c4eb4012528bba74cd, type: 3}
+  _MentalHealth: {fileID: 0}
   BtnRoom: {fileID: 1970880601}
 --- !u!4 &1180850056
 Transform:

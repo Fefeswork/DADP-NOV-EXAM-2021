@@ -858,16 +858,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065719f38bfdeb84293846e9837e2481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: 7c672e6b6bf8bed4f8761201ae75aac0, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: adc105b6269a0fd479c516a28d67188c, type: 3}
   _textField: {fileID: 1310693765}
   _choiceButtonContainer: {fileID: 1690976729}
   _choiceButtonPrefab: {fileID: 130489718}
   _normalTextColor: {r: 0, g: 0, b: 0, a: 0.95686275}
-  _thoughtTextColor: {r: 0, g: 0, b: 0, a: 0.8392157}
+  _thoughtTextColor: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
+  _ezraTextColor: {r: 0, g: 0, b: 0, a: 0}
+  _momTextColor: {r: 0, g: 0, b: 0, a: 0}
+  _laylaTextColor: {r: 0, g: 0, b: 0, a: 0}
+  _rileyTextColor: {r: 0, g: 0, b: 0, a: 0}
   Fine: {fileID: 0}
   Happy: {fileID: 0}
   Worried: {fileID: 0}
   Normal: {fileID: 0}
+  _MentalHealth: {fileID: 0}
   BtnRoom: {fileID: 1837500865}
 --- !u!1 &1401576226
 GameObject:
@@ -1103,7 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8980392, g: 0.8980392, b: 0.8980392, a: 0.6745098}
+  m_Color: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 0.80784315}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1241,7 +1246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.6745098}
+  m_Color: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 0.80784315}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

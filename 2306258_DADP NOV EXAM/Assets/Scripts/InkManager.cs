@@ -193,7 +193,7 @@ public class InkManager : MonoBehaviour
             _textField.color = _rileyTextColor;
             _textField.fontStyle = FontStyle.Normal;
         }
-        else if(_story.currentTags.Contains("Layala"))
+        else if(_story.currentTags.Contains("Layla"))
         {
             _textField.color = _laylaTextColor;
             _textField.fontStyle = FontStyle.Normal;
