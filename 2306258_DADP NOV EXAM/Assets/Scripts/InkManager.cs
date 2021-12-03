@@ -16,6 +16,7 @@ public class InkManager : MonoBehaviour
     [SerializeField]
     private VerticalLayoutGroup _choiceButtonContainer;
 
+
     [SerializeField]
     private Button _choiceButtonPrefab;
 
@@ -43,8 +44,6 @@ public class InkManager : MonoBehaviour
     public Sprite Happy;
     public Sprite Worried;
     public Sprite Normal;
-
-    public GameObject button;
 
     public Text _MentalHealth;
     public int MentalHealth
@@ -117,6 +116,7 @@ public class InkManager : MonoBehaviour
         else if (_story.canContinue == false)
         {
             Debug.Log("Story has ended!");
+
             CurrentState();
             SpawnButton();
             
@@ -238,7 +238,7 @@ public class InkManager : MonoBehaviour
 
     public void SpawnButton()
     {
-        Instantiate(button, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(BtnRoom, GameObject.Find("Button").transform.position, Quaternion.identity);
         Debug.Log("Button Spawned");
     }
 

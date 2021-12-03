@@ -10,6 +10,7 @@ TagManager:
   - Happ
   - Wor
   - Normal
+  - Button
   layers:
   - Default
   - TransparentFX
